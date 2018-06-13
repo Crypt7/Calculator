@@ -46,14 +46,32 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Model\Digits.cs" />
+    <Compile Include="Model\ClearCommand.cs" />
+    <Compile Include="Model\DigitCommand.cs" />
+    <Compile Include="Model\DigitZeroCommand.cs" />
+    <Compile Include="Model\Expression.cs" />
+    <Compile Include="Model\Input.cs" />
+    <Compile Include="Model\InputCommands.cs" />
+    <Compile Include="Model\KeyBoard.cs" />
+    <Compile Include="Model\MathAddCommand.cs" />
+    <Compile Include="Model\MathDivideCommand.cs" />
+    <Compile Include="Model\ICommand.cs" />
+    <Compile Include="Model\MathEqilCommand.cs" />
+    <Compile Include="Model\MathMultiplayCommand.cs" />
+    <Compile Include="Model\Number.cs" />
+    <Compile Include="Model\MathDubstractCommand.cs" />
+    <Compile Include="Views\Calculator.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Views\Calculator.Designer.cs">
+      <DependentUpon>Calculator.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Views\Calculator.resx">
+      <DependentUpon>Calculator.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -75,6 +93,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Presenters\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
